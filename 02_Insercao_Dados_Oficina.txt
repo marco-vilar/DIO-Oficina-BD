@@ -1,0 +1,361 @@
+use oficina;
+
+-- Tabela Inserção Dados - Mecânico
+
+INSERT INTO Mecanico (Nome, CPF, Endereco, Codigo_Individual, Codigo_Equipe, Especialidade) VALUES
+('Carlos Mendes', '66975532605', 'Rua dos Goitacazes, 100 - Centro', 'MEC01', 'Equipe 1', 'Mecânica'),
+('João Almeida', '60246593008', 'Avenida Amazonas, 500 - Barro Preto', 'MEC02', 'Equipe 1', 'Mecânica'),
+('Maria Silva', '98401887046', 'Rua Tupis, 200 - Centro', 'MEC03', 'Equipe 1', 'Elétrica'),
+('Paulo Santos', '49511598058', 'Rua Rio Grande do Sul, 300 - Funcionários', 'MEC04', 'Equipe 1', 'Eletrônica'),
+('Fernanda Lima', '90910533059', 'Rua Pernambuco, 400 - Savassi', 'MEC05', 'Equipe 1', 'Climatização'),
+('Ricardo Pereira', '16422363060', 'Rua da Bahia, 600 - Lourdes', 'MEC06', 'Equipe 1', 'Diagnóstico'),
+('Antônio Costa', '24024813072', 'Rua Guajajaras, 150 - Centro', 'MEC07', 'Equipe 2', 'Mecânica'),
+('Marcos Oliveira', '98496367002', 'Avenida Bias Fortes, 700 - Barro Preto', 'MEC08', 'Equipe 2', 'Mecânica'),
+('Juliana Rodrigues', '99694427088', 'Rua dos Caetés, 250 - Centro', 'MEC09', 'Equipe 2', 'Elétrica'),
+('Lucas Fernandes', '83846654000', 'Rua Paraíba, 350 - Funcionários', 'MEC10', 'Equipe 2', 'Eletrônica'),
+('Camila Souza', '49351266044', 'Rua Sergipe, 450 - Savassi', 'MEC11', 'Equipe 2', 'Climatização'),
+('Gustavo Lima', '20841864047', 'Rua Alvares Cabral, 550 - Lourdes', 'MEC12', 'Equipe 2', 'Diagnóstico'),
+('Roberto Alves', '61288909039', 'Rua Espírito Santo, 650 - Centro', 'MEC13', 'Equipe 3', 'Mecânica'),
+('Daniel Gomes', '67062591017', 'Rua Rio de Janeiro, 750 - Barro Preto', 'MEC14', 'Equipe 3', 'Mecânica'),
+('Ana Paula', '1406936022', 'Rua Varginha, 850 - Funcionários', 'MEC15', 'Equipe 3', 'Elétrica'),
+('Felipe Ribeiro', '26379929053', 'Rua Santa Catarina, 950 - Savassi', 'MEC16', 'Equipe 3', 'Eletrônica'),
+('Carla Mendonça', '77880822011', 'Rua Padre Rolim, 1050 - Lourdes', 'MEC17', 'Equipe 3', 'Climatização'),
+('Eduardo Castro', '21242124004', 'Rua Olegário Maciel, 1150 - Centro', 'MEC18', 'Equipe 3', 'Diagnóstico'),
+('Rodrigo Ferreira', '16177158080', 'Rua Curitiba, 1250 - Centro', 'MEC19', 'Equipe 4', 'Mecânica'),
+('Thiago Martins', '9647115083', 'Rua São Paulo, 1350 - Barro Preto', 'MEC20', 'Equipe 4', 'Mecânica'),
+('Laura Cardoso', '51361983035', 'Rua Aimorés, 1450 - Funcionários', 'MEC21', 'Equipe 4', 'Elétrica'),
+('Bruno Alencar', '48667829005', 'Rua Itajubá, 1550 - Savassi', 'MEC22', 'Equipe 4', 'Eletrônica'),
+('Renata Vieira', '59696932006', 'Rua Contagem, 1650 - Lourdes', 'MEC23', 'Equipe 4', 'Climatização'),
+('Vinícius Sousa', '72854802071', 'Rua Divinópolis, 1750 - Centro', 'MEC24', 'Equipe 4', 'Diagnóstico'),
+('André Torres', '55931459030', 'Rua Uberlândia, 1850 - Centro', 'MEC25', 'Equipe 5', 'Mecânica'),
+('Rafael Carvalho', '89853847086', 'Rua Poços de Caldas, 1950 - Barro Preto', 'MEC26', 'Equipe 5', 'Mecânica'),
+('Isabela Nogueira', '32328311091', 'Rua Montes Claros, 2050 - Funcionários', 'MEC27', 'Equipe 5', 'Elétrica'),
+('Diego Barbosa', '14773140089', 'Rua Juiz de Fora, 2150 - Savassi', 'MEC28', 'Equipe 5', 'Eletrônica'),
+('Patrícia Lima', '44578387054', 'Rua Governador Valadares, 2250 - Lourdes', 'MEC29', 'Equipe 5', 'Climatização'),
+('Marcelo Rocha', '15535798010', 'Rua Sete Lagoas, 2350 - Centro', 'MEC30', 'Equipe 5', 'Diagnóstico');
+
+-- Tabela de Valores
+
+INSERT INTO Valores (Descricao_Peca, Descricao_Mao_Obra, Valor_Peca, Valor_Mao_Obra) VALUES
+-- Peças relacionadas ao motor
+('Filtro de Óleo', 'Troca de Filtro de Óleo', 50.00, 30.00),
+('Óleo Lubrificante', 'Troca de Óleo Lubrificante', 120.00, 40.00),
+('Vela de Ignição', 'Substituição de Vela de Ignição', 80.00, 60.00),
+('Bomba de Água', 'Substituição da Bomba de Água', 350.00, 200.00),
+('Correia Dentada', 'Troca da Correia Dentada', 250.00, 150.00),
+('Radiador', 'Substituição do Radiador', 500.00, 250.00),
+('Junta do Cabeçote', 'Troca da Junta do Cabeçote', 400.00, 300.00),
+('Bomba de Combustível', 'Substituição da Bomba de Combustível', 450.00, 200.00),
+('Sensor de Oxigênio', 'Substituição do Sensor de Oxigênio', 300.00, 150.00),
+('Cabeçote', 'Retífica do Cabeçote', 700.00, 500.00),
+
+-- Peças relacionadas ao sistema de freios
+('Pastilha de Freio', 'Troca de Pastilha de Freio', 120.00, 80.00),
+('Disco de Freio', 'Substituição do Disco de Freio', 300.00, 150.00),
+('Fluído de Freio', 'Troca de Fluido de Freio', 80.00, 50.00),
+('Cilindro Mestre de Freio', 'Substituição do Cilindro Mestre', 250.00, 180.00),
+('Tambor de Freio', 'Substituição do Tambor de Freio', 200.00, 120.00),
+('Lonas de Freio', 'Troca de Lonas de Freio', 150.00, 100.00),
+('Pinça de Freio', 'Revisão/Substituição da Pinça de Freio', 400.00, 250.00),
+
+-- Peças relacionadas ao sistema elétrico
+('Bateria Automotiva', 'Instalação de Bateria', 300.00, 50.00),
+('Alternador', 'Substituição do Alternador', 600.00, 250.00),
+('Motor de Partida', 'Substituição do Motor de Partida', 500.00, 200.00),
+('Lâmpada Farol', 'Substituição da Lâmpada do Farol', 30.00, 20.00),
+('Interruptor de Setas', 'Substituição do Interruptor de Setas', 120.00, 80.00),
+('Fusíveis', 'Substituição de Fusíveis', 10.00, 15.00),
+('Régua de LED Interno', 'Instalação de Régua de LED', 80.00, 50.00),
+
+-- Peças relacionadas à suspensão e direção
+('Amortecedor', 'Substituição do Amortecedor', 350.00, 150.00),
+('Bandeja de Suspensão', 'Substituição da Bandeja de Suspensão', 400.00, 200.00),
+('Barra Axial', 'Substituição da Barra Axial', 250.00, 120.00),
+('Terminal de Direção', 'Substituição do Terminal de Direção', 150.00, 100.00),
+('Coifa de Direção', 'Substituição da Coifa de Direção', 80.00, 50.00),
+('Bucha de Suspensão', 'Substituição da Bucha de Suspensão', 100.00, 80.00),
+('Mola Helicoidal', 'Substituição da Mola Helicoidal', 300.00, 180.00),
+
+-- Peças relacionadas ao sistema de transmissão
+('Embreagem', 'Substituição da Embreagem', 800.00, 350.00),
+('Cubo de Roda', 'Substituição do Cubo de Roda', 250.00, 150.00),
+('Homocinética', 'Substituição da Homocinética', 400.00, 250.00),
+('Caixa de Direção', 'Revisão/Substituição da Caixa de Direção', 1200.00, 500.00),
+('Diferencial', 'Revisão/Substituição do Diferencial', 1500.00, 700.00),
+
+-- Peças relacionadas ao sistema de arrefecimento
+('Ventoinha do Radiador', 'Substituição da Ventoinha do Radiador', 200.00, 100.00),
+('Reservatório de Água', 'Substituição do Reservatório de Água', 100.00, 50.00),
+('Termostato', 'Substituição do Termostato', 150.00, 80.00),
+
+-- Peças diversas
+('Para-brisa', 'Substituição do Para-brisa', 600.00, 200.00),
+('Palhetas do Limpador', 'Substituição das Palhetas do Limpador', 50.00, 30.00),
+('Silencioso Traseiro', 'Substituição do Silencioso Traseiro', 300.00, 150.00),
+('Catalisador', 'Substituição do Catalisador', 1200.00, 400.00),
+('Pneu', 'Substituição de Pneu', 400.00, 50.00);
+
+-- Tabela Clientes
+
+INSERT INTO Cliente (Nome, CPF, Endereço, Veículo, Placa) VALUES
+('Luciana Teodoro Zuniga Neto', '36331833021', 'Rua dos Goitacazes, 150 - Centro', 'Hyundai HB20', 'MVL9333'),
+('Flavia Silvino Prata Lima', '54075583007', 'Avenida Amazonas, 700 - Barro Preto', 'Ford Ka', 'KTR6919'),
+('Ingrid Henriquez Moura Texeira', '79295149009', 'Rua Tupis, 300 - Centro', 'Renault Kwid', 'HOU7427'),
+('Abraão Viana Vilela Monteiro', '42860844007', 'Rua Rio Grande do Sul, 450 - Funcionários', 'Volkswagen Polo', 'KAN5723'),
+('Benjamin Junior Dores Alentejo', '32181777071', 'Rua Pernambuco, 600 - Savassi', 'Chevrolet Cruze', 'LVB9081'),
+('Jessyca da Sousa Wulff Nespoli', '96039068086', 'Rua Dezessete, 200 - Eldorado', 'Fiat Toro', 'MSA1214'),
+('Riselda Nigro Simoes Anastacio', '56707526006', 'Avenida João César de Oliveira, 500 - Jardim Industrial', 'Jeep Compass', 'HGI3557'),
+('João Leite Debossam Borralho', '33569874028', 'Rua Tiradentes, 350 - Centro', 'Toyota Corolla', 'KFK4069'),
+('Anizio da Sousa Furtunato Giron', '43627981022', 'Rua Sete de Setembro, 400 - Novo Riacho', 'Nissan Versa', 'MSO9558'),
+('Manoel Garbelini Frossard Dias', '05862456007', 'Rua São José, 100 - Centro', 'Fiat Argo', 'JTX2028'),
+('Wesley Jesus da Conceição Bochimpani', '20468652000', 'Avenida JK, 250 - Morada Nova', 'Volkswagen Virtus', 'NBS1490'),
+('Elvis Mello Giron Terra', '58112314071', 'Rua Pará, 180 - Centro', 'Honda Civic', 'JNC1802'),
+('Tatiane Pedroso Chaves Figueiras', '75713953050', 'Avenida Governador Valadares, 300 - Angola', 'Chevrolet Tracker', 'JYE1397'),
+('Waleska Muniz Paiva Sales', '56756756789', 'Rua Padre Rolim, 120 - Centro', 'Hyundai Creta', 'MRA2606'),
+('Stephania Montilla Iwamoto Ximenes', '93406586040', 'Rua da Matriz, 80 - Centro', 'Fiat Mobi', 'NEL7252'),
+('Ariel Fonseca Vidal Barsosa', '89792803009', 'Rua Minas Gerais, 220 - Justinópolis', 'Volkswagen Voyage', 'JZQ0909'),
+('Lucas Felipe Garbelini Vitorino Portela', '56169067004', 'Avenida Pedro I, 350 - Veneza', 'Toyota Yaris', 'MCU4867');
+
+-- Tabela Avaliação
+
+INSERT INTO Avaliacao (id_Avaliacao_Cliente, Codigo_Equipe, Data_OS, Tipo_Servico) VALUES
+-- Clientes 1 a 5
+(1, 'Equipe 1', '2025-01-05', 'Manutenção'),
+(2, 'Equipe 2', '2025-01-07', 'Freios'),
+(3, 'Equipe 3', '2025-01-09', 'Elétrica e Eletrônica'),
+(4, 'Equipe 4', '2025-01-11', 'Motor'),
+(5, 'Equipe 5', '2025-01-13', 'Suspensão e Direção'),
+
+-- Clientes 6 a 10
+(6, 'Equipe 1', '2025-01-15', 'Climatização'),
+(7, 'Equipe 2', '2025-01-17', 'Elétrica e Eletrônica'),
+(8, 'Equipe 3', '2025-01-19', 'Freios'),
+(9, 'Equipe 4', '2025-01-21', 'Manutenção'),
+(10, 'Equipe 5', '2025-01-23', 'Motor'),
+
+-- Clientes 11 a 15
+(11, 'Equipe 1', '2025-01-25', 'Suspensão e Direção'),
+(12, 'Equipe 2', '2025-01-27', 'Climatização'),
+(13, 'Equipe 3', '2025-01-29', 'Elétrica e Eletrônica'),
+(14, 'Equipe 4', '2025-02-01', 'Freios'),
+(15, 'Equipe 5', '2025-02-03', 'Manutenção'),
+
+-- Clientes 16 e 17
+(16, 'Equipe 1', '2025-02-05', 'Motor'),
+(17, 'Equipe 2', '2025-02-07', 'Suspensão e Direção');
+
+-- Tabela OrdemServico
+
+INSERT INTO OrdemServico (id_OrdemServico_Avaliacao, Numero_OS, Data_Emissao, Data_Entrega, Status_Servico, Valor) VALUES
+-- Avaliação 1: Manutenção (Filtro de Óleo + Troca de Filtro)
+(1, 'OS001', '2025-01-05', '2025-01-10', 'Finalizado', 80.00),
+
+-- Avaliação 2: Freios (Pastilha de Freio + Troca de Pastilha)
+(2, 'OS002', '2025-01-07', '2025-01-12', 'Finalizado', 200.00),
+
+-- Avaliação 3: Elétrica e Eletrônica (Bateria Automotiva + Instalação de Bateria)
+(3, 'OS003', '2025-01-09', '2025-01-14', 'Finalizado', 350.00),
+
+-- Avaliação 4: Motor (Correia Dentada + Troca da Correia Dentada)
+(4, 'OS004', '2025-01-11', '2025-01-16', 'Em análise', 400.00),
+
+-- Avaliação 5: Suspensão e Direção (Amortecedor + Substituição do Amortecedor)
+(5, 'OS005', '2025-01-13', '2025-01-18', 'Não iniciado', 500.00),
+
+-- Avaliação 6: Climatização (Ventoinha do Radiador + Substituição da Ventoinha)
+(6, 'OS006', '2025-01-15', '2025-01-20', 'Finalizado', 300.00),
+
+-- Avaliação 7: Elétrica e Eletrônica (Alternador + Substituição do Alternador)
+(7, 'OS007', '2025-01-17', '2025-01-22', 'Finalizado', 850.00),
+
+-- Avaliação 8: Freios (Disco de Freio + Substituição do Disco de Freio)
+(8, 'OS008', '2025-01-19', '2025-01-24', 'Finalizado', 450.00),
+
+-- Avaliação 9: Manutenção (Óleo Lubrificante + Troca de Óleo)
+(9, 'OS009', '2025-01-21', '2025-01-26', 'Finalizado', 160.00),
+
+-- Avaliação 10: Motor (Junta do Cabeçote + Troca da Junta do Cabeçote)
+(10, 'OS010', '2025-01-23', '2025-01-28', 'Em análise', 700.00),
+
+-- Avaliação 11: Suspensão e Direção (Bandeja de Suspensão + Substituição da Bandeja)
+(11, 'OS011', '2025-01-25', '2025-01-30', 'Não iniciado', 600.00),
+
+-- Avaliação 12: Climatização (Termostato + Substituição do Termostato)
+(12, 'OS012', '2025-01-27', '2025-02-01', 'Finalizado', 230.00),
+
+-- Avaliação 13: Elétrica e Eletrônica (Sensor de Oxigênio + Substituição do Sensor)
+(13, 'OS013', '2025-01-29', '2025-02-03', 'Finalizado', 450.00),
+
+-- Avaliação 14: Freios (Fluído de Freio + Troca de Fluido de Freio)
+(14, 'OS014', '2025-02-01', '2025-02-06', 'Finalizado', 130.00),
+
+-- Avaliação 15: Manutenção (Vela de Ignição + Substituição de Vela de Ignição)
+(15, 'OS015', '2025-02-03', '2025-02-08', 'Finalizado', 140.00),
+
+-- Avaliação 16: Motor (Radiador + Substituição do Radiador)
+(16, 'OS016', '2025-02-05', '2025-02-10', 'Em análise', 750.00),
+
+-- Avaliação 17: Suspensão e Direção (Terminal de Direção + Substituição do Terminal)
+(17, 'OS017', '2025-02-07', '2025-02-12', 'Não iniciado', 250.00);
+
+-- Tabela Execução
+
+INSERT INTO Execucao (id_Execucao_Cliente, id_Execucao_OrdemServico, Aprovacao, Status_Execucao) VALUES
+-- Cliente 1: OS001 (Finalizado)
+(1, 1, 'Aprovado', 'Finalizado'),
+
+-- Cliente 2: OS002 (Finalizado)
+(2, 2, 'Aprovado', 'Finalizado'),
+
+-- Cliente 3: OS003 (Finalizado)
+(3, 3, 'Aprovado', 'Finalizado'),
+
+-- Cliente 4: OS004 (Em análise)
+(4, 4, 'Aguardando aprovação', 'Não iniciado'),
+
+-- Cliente 5: OS005 (Não iniciado)
+(5, 5, 'Cancelado', 'Não iniciado'),
+
+-- Cliente 6: OS006 (Finalizado)
+(6, 6, 'Aprovado', 'Finalizado'),
+
+-- Cliente 7: OS007 (Finalizado)
+(7, 7, 'Aprovado', 'Finalizado'),
+
+-- Cliente 8: OS008 (Finalizado)
+(8, 8, 'Aprovado', 'Finalizado'),
+
+-- Cliente 9: OS009 (Finalizado)
+(9, 9, 'Aprovado', 'Finalizado'),
+
+-- Cliente 10: OS010 (Em análise)
+(10, 10, 'Aguardando aprovação', 'Não iniciado'),
+
+-- Cliente 11: OS011 (Não iniciado)
+(11, 11, 'Cancelado', 'Não iniciado'),
+
+-- Cliente 12: OS012 (Finalizado)
+(12, 12, 'Aprovado', 'Finalizado'),
+
+-- Cliente 13: OS013 (Finalizado)
+(13, 13, 'Aprovado', 'Finalizado'),
+
+-- Cliente 14: OS014 (Finalizado)
+(14, 14, 'Aprovado', 'Finalizado'),
+
+-- Cliente 15: OS015 (Finalizado)
+(15, 15, 'Aprovado', 'Finalizado'),
+
+-- Cliente 16: OS016 (Em análise)
+(16, 16, 'Aguardando aprovação', 'Não iniciado'),
+
+-- Cliente 17: OS017 (Não iniciado)
+(17, 17, 'Cancelado', 'Não iniciado');
+
+-- Tabela Mecanico Avaliação
+
+INSERT INTO Mecanico_Avaliacao (id_Mecanico_Avaliacao_Mecanico, id_Mecanico_Avaliacao_Avaliacao) VALUES
+-- Avaliação 1: Equipe 1 (Ricardo Pereira - Diagnóstico)
+(6, 1),
+
+-- Avaliação 2: Equipe 2 (Gustavo Lima - Diagnóstico)
+(12, 2),
+
+-- Avaliação 3: Equipe 3 (Eduardo Castro - Diagnóstico)
+(18, 3),
+
+-- Avaliação 4: Equipe 4 (Vinícius Sousa - Diagnóstico)
+(24, 4),
+
+-- Avaliação 5: Equipe 5 (Marcelo Rocha - Diagnóstico)
+(30, 5),
+
+-- Avaliação 6: Equipe 1 (Ricardo Pereira - Diagnóstico)
+(6, 6),
+
+-- Avaliação 7: Equipe 2 (Gustavo Lima - Diagnóstico)
+(12, 7),
+
+-- Avaliação 8: Equipe 3 (Eduardo Castro - Diagnóstico)
+(18, 8),
+
+-- Avaliação 9: Equipe 4 (Vinícius Sousa - Diagnóstico)
+(24, 9),
+
+-- Avaliação 10: Equipe 5 (Marcelo Rocha - Diagnóstico)
+(30, 10),
+
+-- Avaliação 11: Equipe 1 (Ricardo Pereira - Diagnóstico)
+(6, 11),
+
+-- Avaliação 12: Equipe 2 (Gustavo Lima - Diagnóstico)
+(12, 12),
+
+-- Avaliação 13: Equipe 3 (Eduardo Castro - Diagnóstico)
+(18, 13),
+
+-- Avaliação 14: Equipe 4 (Vinícius Sousa - Diagnóstico)
+(24, 14),
+
+-- Avaliação 15: Equipe 5 (Marcelo Rocha - Diagnóstico)
+(30, 15),
+
+-- Avaliação 16: Equipe 1 (Ricardo Pereira - Diagnóstico)
+(6, 16),
+
+-- Avaliação 17: Equipe 2 (Gustavo Lima - Diagnóstico)
+(12, 17);
+
+-- Tabela valor-ordem servico
+
+INSERT INTO Valores_OrdemServico (id_Valores_OrdemServico_Valores, id_Valores_OrdemServico_OrdemServico) VALUES
+-- OS001: Filtro de Óleo + Troca de Filtro
+(1, 1),
+
+-- OS002: Pastilha de Freio + Troca de Pastilha
+(2, 2),
+
+-- OS003: Bateria Automotiva + Instalação de Bateria
+(3, 3),
+
+-- OS004: Correia Dentada + Troca da Correia Dentada
+(5, 4),
+
+-- OS005: Amortecedor + Substituição do Amortecedor
+(17, 5),
+
+-- OS006: Ventoinha do Radiador + Substituição da Ventoinha
+(31, 6),
+
+-- OS007: Alternador + Substituição do Alternador
+(8, 7),
+
+-- OS008: Disco de Freio + Substituição do Disco de Freio
+(11, 8),
+
+-- OS009: Óleo Lubrificante + Troca de Óleo
+(2, 9),
+
+-- OS010: Junta do Cabeçote + Troca da Junta do Cabeçote
+(7, 10),
+
+-- OS011: Bandeja de Suspensão + Substituição da Bandeja
+(16, 11),
+
+-- OS012: Termostato + Substituição do Termostato
+(30, 12),
+
+-- OS013: Sensor de Oxigênio + Substituição do Sensor
+(9, 13),
+
+-- OS014: Fluido de Freio + Troca de Fluido de Freio
+(12, 14),
+
+-- OS015: Vela de Ignição + Substituição de Vela de Ignição
+(3, 15),
+
+-- OS016: Radiador + Substituição do Radiador
+(6, 16),
+
+-- OS017: Terminal de Direção + Substituição do Terminal
+(15, 17);

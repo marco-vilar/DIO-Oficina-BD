@@ -1,0 +1,10 @@
+use oficina;
+
+SELECT 
+    Avaliacao.Codigo_Equipe,
+    COUNT(*) AS Total_Finalizadas
+FROM Avaliacao
+JOIN OrdemServico ON Avaliacao.id_Avaliacao = OrdemServico.id_OrdemServico_Avaliacao
+WHERE OrdemServico.Status_Servico = 'Finalizado'
+GROUP BY Avaliacao.Codigo_Equipe
+ORDER BY Total_Finalizadas DESC;

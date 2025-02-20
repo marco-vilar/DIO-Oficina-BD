@@ -1,0 +1,9 @@
+use oficina;
+
+SELECT 
+    Valores.Descricao_Peca,
+    COUNT(*) AS Total_Utilizacoes
+FROM Valores_OrdemServico
+JOIN Valores ON Valores_OrdemServico.id_Valores_OrdemServico_Valores = Valores.id_Valores
+GROUP BY Valores.Descricao_Peca
+ORDER BY Total_Utilizacoes DESC;

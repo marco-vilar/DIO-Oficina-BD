@@ -1,0 +1,11 @@
+use oficina;
+
+SELECT 
+    Cliente.Nome,
+    OrdemServico.Numero_OS,
+    OrdemServico.Data_Emissao,
+    OrdemServico.Valor AS Valor_Cancelado
+FROM OrdemServico
+JOIN Execucao ON OrdemServico.id_OrdemServico = Execucao.id_Execucao_OrdemServico
+JOIN Cliente ON Execucao.id_Execucao_Cliente = Cliente.id_Cliente
+WHERE Execucao.Aprovacao = 'Cancelado';

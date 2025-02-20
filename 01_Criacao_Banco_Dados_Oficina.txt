@@ -1,0 +1,115 @@
+create database Oficina;
+
+use oficina;
+
+-- criar tabela cliente
+
+create table Cliente( 
+
+	id_Cliente int auto_increment primary key,
+	Nome varchar(255) not null,
+	CPF char(11) not null,
+	Endereço varchar(255) not null,
+	Veículo varchar(255) not null,
+	Placa char(7) not null,
+	
+	constraint unique_CPF_cliente unique (CPF),
+	constraint unique_Placa_Cliente unique (Placa) 
+);
+ALTER TABLE Cliente AUTO_INCREMENT = 1;
+
+-- criar tabela produto
+
+create table Mecanico(
+
+	id_Mecanico int auto_increment primary key,
+	Nome varchar(45) not null,
+    CPF char(11) not null,
+    Endereco varchar(255) not null,
+	Codigo_Individual char(5) not null,
+	Codigo_Equipe enum('Equipe 1', 'Equipe 2', 'Equipe 3', 'Equipe 4', 'Equipe 5') not null,
+    Especialidade enum('Mecânica', 'Elétrica', 'Eletrônica', 'Climatização', 'Diagnóstico') not null,
+
+	constraint unique_CPF_Mecanico unique (CPF)
+
+);
+
+create table Valores(
+
+	id_Valores int auto_increment primary key,
+	Descricao_Peca varchar(255) not null,
+    Descricao_Mao_Obra char(255) not null,
+    Valor_Peca float not null,
+	Valor_Mao_Obra float not null
+	
+);
+
+create table Avaliacao(
+
+	id_Avaliacao int auto_increment primary key,
+    id_Avaliacao_Cliente int,
+    Codigo_Equipe enum('Equipe 1', 'Equipe 2', 'Equipe 3', 'Equipe 4', 'Equipe 5') not null,
+	Data_OS date not null,
+    Tipo_Servico enum('Manutenção', 'Motor', 'Suspensão e Direção', 'Freios','Climatização','Elétrica e Eletrônica') not null,
+    
+    
+    constraint fk_avaliacao_cliente foreign key (id_Avaliacao_Cliente) references Cliente(id_CLiente)
+	
+);
+
+create table OrdemServico(
+
+	id_OrdemServico int auto_increment primary key,
+    id_OrdemServico_Avaliacao int,
+    
+    Numero_OS char(5) not null,
+    Data_Emissao date not null,
+    Data_Entrega date not null,
+    Status_Servico enum('Não iniciado', 'Em análise', 'Finalizado') not null,
+    Valor float not null,
+      
+    
+    constraint fk_OrdemServico_Avaliacao foreign key (id_OrdemServico_Avaliacao) references Avaliacao(id_Avaliacao)
+	
+);
+
+create table Execucao(
+
+	id_Execucao int auto_increment primary key,
+    id_Execucao_Cliente int,
+    id_Execucao_OrdemServico int,
+    
+    Aprovacao enum('Aguardando aprovação','Aprovado', 'Cancelado') not null,
+    
+    Status_Execucao enum('Não iniciado', 'Em execução', 'Finalizado') not null,
+    
+      
+    
+    constraint fk_Execucao_Cliente foreign key (id_Execucao_Cliente) references Cliente(id_Cliente),
+    constraint fk_Execucao_OrdemServico foreign key (id_Execucao_OrdemServico) references OrdemServico(id_OrdemServico)
+	
+);
+
+create table Mecanico_Avaliacao(
+
+	id_Mecanico_Avaliacao_Mecanico int,
+    id_Mecanico_Avaliacao_Avaliacao int,
+    
+    primary key(id_Mecanico_Avaliacao_Mecanico, id_Mecanico_Avaliacao_Avaliacao),
+        
+    constraint fk_MecanicoAvaliacao_Mecanico foreign key (id_Mecanico_Avaliacao_Mecanico) references Mecanico(id_Mecanico),
+	constraint fk_MecanicoAvaliacao_Avaliacao foreign key (id_Mecanico_Avaliacao_Avaliacao) references Avaliacao(id_Avaliacao)
+   		
+);
+
+create table Valores_OrdemServico(
+
+	id_Valores_OrdemServico_Valores int,
+    id_Valores_OrdemServico_OrdemServico int,
+    
+    primary key(id_Valores_OrdemServico_Valores, id_Valores_OrdemServico_OrdemServico),
+        
+    constraint fk_ValoresOrdemServico_Valores foreign key (id_Valores_OrdemServico_Valores) references Valores(id_Valores),
+	constraint fk_ValoresOrdemServico_OrdemServico foreign key (id_Valores_OrdemServico_OrdemServico) references OrdemServico(id_OrdemServico)
+   		
+);

@@ -1,0 +1,10 @@
+use oficina;
+
+-- Lucro e Janeiro de 2025
+
+SELECT 
+    SUM(Valor) AS Lucro_Janeiro_2025
+FROM OrdemServico
+WHERE Data_Emissao >= '2025-01-01' 
+  AND Data_Emissao <= '2025-01-31'
+  AND Status_Servico = 'Finalizado';
