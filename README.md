@@ -20,6 +20,7 @@ A partir do modelo de Entidade - Relacionamento criado foi mais simples a criaç
 
 Abaixo a criação do Banco de Dados de acordo com os relacionamentos, os atributos, as constraints e as Primary Key e Foreign Key.
 
+- [Código Criação Banco de Dados](documentos/banco_de_dados/01_Criacao_Banco_Dados_Oficina.txt)
 
 
 
@@ -27,10 +28,7 @@ Abaixo a criação do Banco de Dados de acordo com os relacionamentos, os atribu
 
 Dados inseridos de exemplo para o modelo de Banco de Dados.
 
-
-
-
-
+- [Código de Inserção dos Dados](documentos/banco_de_dados/02_Insercao_Dados_Oficina.txt)
 
 # Respostas das Queries
 
@@ -38,20 +36,18 @@ Dados inseridos de exemplo para o modelo de Banco de Dados.
 
 Comando em SQL
 
-
-
-
+- [Faturamento de Janeiro de 2025](documentos/banco_de_dados/03_Lucro_Janeiro_2025.txt)
 
 Resultados
 
+![image](https://github.com/user-attachments/assets/0466ed2b-e24c-4a4c-a957-a8ee3fe373e4)
 
-    
 
 ## 2 - Quais serviços foram cancelados, por quem e quanto deixei de faturar?
 
 Código SQL
 
-- [6 - Query 2](documentos/banco_de_dados/6_Query_2_Rev.00.txt)
+- [Serviços Cancelados](documentos/banco_de_dados/04_OS_Cancelada.txt)
 
 Resultados
 
@@ -63,7 +59,7 @@ Resultados
 
 Código SQL
 
-
+- [Equipes que mais finalizaram serviços](documentos/banco_de_dados/05_Equipe_Mais_Finalizou.txt)
 
 Resultados
 
@@ -74,7 +70,7 @@ Resultados
 
 Código SQL
 
-
+- [Peças mais utilizadas](documentos/banco_de_dados/06_Pecas_Mais_Utilizadas.txt)
 
 Resultados
 
